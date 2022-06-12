@@ -9,8 +9,10 @@ public class Solution70 {
   public int climbStairs_dp(int n) {
     int[] fibo = new int[n + 1];
 
+    fibo[0] = 1;
     fibo[1] = 1;
-    for (int i = 2; i <= n; i++) {
+
+    for (int i = 3; i <= n; i++) {
       fibo[i] = fibo[i - 1] + fibo[i - 2];
     }
 
@@ -19,8 +21,12 @@ public class Solution70 {
   }
 
   public int climbStairs_dp_memory(int n) {
-    int prev = 1, prevPrev = 0;
+    int prev = 1, prevPrev = 1;
     int result = 0;
+
+    if (n <= 1) {
+      return 1;
+    }
 
     for (int i = 2; i <= n; i++) {
       result = prev + prevPrev;
@@ -42,7 +48,7 @@ public class Solution70 {
 
   private int find(int n) {
     if (n <= 1) {
-      return n;
+      return 1;
     }
 
     if (mem[n] == null) {
