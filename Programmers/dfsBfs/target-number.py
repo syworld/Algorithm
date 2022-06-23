@@ -10,8 +10,6 @@ def dfs(n, sum_numbers, target, numbers, last_index):
         if sum_numbers == target:
             cnt += 1
         return
-    elif n > last_index + 1:
-        return
 
     dfs(n + 1, sum_numbers + numbers[n], target, numbers, last_index)
     dfs(n + 1, sum_numbers - numbers[n], target, numbers, last_index)
