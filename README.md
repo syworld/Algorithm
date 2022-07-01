@@ -125,14 +125,13 @@ for (char x : str.toCharArray()) {
 
 // 아스키코드 
 char x = '9';
-char x2 =  x - 1;
-int x3 = x - 1;
-char x4 = (char)(x -1);
-System.out.println(x2); // 8
-System.out.println(x3); // 56
-System.out.println(x4); //8
+int x3 = x - 1; // 56
+char x4 = (char)(x -1); //8 숫자 -> 문자
+int x5 = (int) x4; //56 문자 -> 숫자 
 
 Character.getNumericValue(x) // 9 
+
+
 
 // 숫자 char형 아스키코드 '0' ~ '9' : 48 ~ 57
 int answer = 0;
