@@ -10,7 +10,6 @@ public class Solution3 {
   public int[] solution(String[] operations) {
     int[] answer = new int[2];
     PriorityQueue<Integer> minHeap = new PriorityQueue<Integer>();
-
     PriorityQueue<Integer> maxHeap = new PriorityQueue<Integer>(Collections.reverseOrder());
 
     for (String op : operations) {

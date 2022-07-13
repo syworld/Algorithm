@@ -148,6 +148,67 @@ Integer.parseInt("110", 10); //110
 ```
 String str = "good";
 String tmp = new StringBuilder(str).reverse().toString(); //doog 
+
+StringBuilder sb = new StringBuilder("aaa");
+
+// 문자열 추가
+sb.append("bbb"); // aaabbb
+sb.append(4); // aaabbb4
+
+// 문자열 삽입
+sb.insert(2, "ccc"); // aacccabbb4
+
+// 문자열 치환, 문자열 교체
+sb.replace(3, 6, "ye"); // aacyebbb4
+
+// 인덱싱, 문자열 자르기
+sb.substring(5); // bbb4
+sb.substring(3, 7); // yebb
+
+// 문자 삭제
+sb.deleteCharAt(3); // aacebbb4
+
+// 문자열 삭제
+sb.delete(3, sb.length()); // aac
+
+// 문자열 변환
+sb.toString(); // aac
+
+// 문자열 뒤집기
+sb.reverse(); // caa
+
+// 문자 대체, 문자 교체, 문자 치환
+sb.setCharAt(1, 'b'); // cba
+
+// 문자열 길이 조정
+sb.setLength(2); // cb
 ```
+
+
+
+### Queue
+
+```
+import java.util.LinkedList; 
+import java.util.Queue; 
+
+Queue<Integer> queue = new LinkedList<>(); 
+
+// 삽입 
+queue.offer(1); // true or false
+queue.add(2); // true or Exception
+
+// 삭제 
+queue.poll(); // 출력 후 제거 or null 반환 
+queue.remove(); // 출력 후 제거 or Exception
+
+// 첫번째 값 
+queue.peek(); // 값 or null 반환
+queue.element(); // 값 반환 or Exception
+
+// 초기화
+queue.clear();
+```
+
 
 
