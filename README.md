@@ -212,3 +212,50 @@ queue.clear();
 
 
 
+### HashMap
+- key, value 쌍의 데이터를 보관 
+- key, value로 null 값 가능
+- 중복된 key는 허용하지 않음
+- not synchronized
+
+```
+Map<String, Integer> map = new HashMap<>();
+
+
+// 삽입
+map.put("a",1);
+
+Map<String, Integer> map2 = new HashMap<>();
+map.put
+
+
+// 조회
+map.get(key); // value or null 반환 
+
+map.keySet(); // Set 객체로 key들 반환 
+map.values(); // Collection 객체로 value들 반환 
+
+Set<String> keys = map.keySet();
+for (String key : keys) {
+    System.out.println("key: " + key);
+}
+
+Collection<Integer> values = map.values();
+for (Integer value : values) {
+    System.out.println("value: " + value);
+}
+
+
+// 삭제 
+map.remove("a"); // 데이터 삭제 후 value or null 반환 
+map.clear(); // 모든 데이터 삭제 
+
+// 확인 
+map.isEmpty(); // true or false 반환 
+map.containsKey("a"); // true or false 반환
+map.containsValue(1); // key가 존재하면 true or false 반환
+
+// 변경 
+map.replace("a", 100); // 값 변경 후 이전 value or 없으면 null 반환   
+
+```
