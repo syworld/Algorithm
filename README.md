@@ -185,6 +185,40 @@ sb.setLength(2); // cb
 ```
 
 
+### ArrayList
+ArrayList는 List 인터페이스를 구현 
+```
+List<String> list = new ArrayList<>();
+ArrayList<String> arrayList = new ArrayList<>();
+ArrayList<String> fruits = new ArrayList<>(Arrays.asList("kiwi", "apple", "melon", "banana"));
+
+// 삽입
+arrayList.add("KK");
+arrayList.addAll(fruits);
+
+// 조회
+arrayList.get(0); // index 요소 반환 or IndexOutOfBoundsException 발생
+arrayList.size(); 
+arrayList.contains("KK"); // true or false 반환 
+arrayList.indexOf("KK"); // index 반환 (값이 중복되면 낮은 index)
+arrayList.lastIndexOf("KK"); // index 반환 (값이 중복되면 높은 index)
+
+// 삭제 
+arrayList.remove(0); // index 요소 제거 후 반환 
+arrayList.clear(); // 모든 요소 제거 
+arrayList.removeAll(fruits); // 전달된 list 모든 요소 제거 
+
+// 순회 
+Consumer<String> lambda= item -> System.out.println("item : " + item);
+arrayList.forEach(lambda);
+
+// 교집합 
+arrayList.retainAll(fruits);  // 겹치는 요소만 남기고 겹치지 않은 요소들은 삭제 
+
+```
+
+
+
 
 ### Queue
 
