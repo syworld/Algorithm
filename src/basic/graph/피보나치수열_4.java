@@ -8,6 +8,10 @@ public class 피보나치수열_4 {
   static int[] fibo;
 
   public int DFS(int n) {
+    if (fibo[n] > 0) {
+      return fibo[n]; // memoization
+    }
+
     if (n == 1 || n == 2) {
       return fibo[n] = 1;
     } else {
